@@ -4,7 +4,7 @@ from sqlalchemy import relationship
 
 
 class userdatacomplete(BaseModel):
-    user_id=Column(int,nullable=True,primarykey=True)
+    user_id=Column(str,nullable=True,primarykey=True)
     user_name=Column(str,nullable=False)
     user_lastname=Column(str,nullable=True)
     user_numberphone=Column(int,nullable=True)
