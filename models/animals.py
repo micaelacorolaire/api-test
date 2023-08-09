@@ -1,12 +1,11 @@
-from sqlalchemy import Column, Integer, String,ForeignKey,HttpUrl
+from sqlalchemy import Column, Integer, String,ForeignKey,HttpUrl,UUID4
 from models.base import BaseModel
 from sqlalchemy import relationship
 
 class animals(BaseModel):
     ___tablename__="Animals"
     __args__={"schema":"public"}
-    id_race=Column(int,ForeignKey=True,nullable=False)
-    id_animal=Column(int,primary_key=True,nullable=False)
+    id_animal=Column(str,primary_key=True,nullable=False)
     age=Column(int,nullable=False)
     hair_color=Column(str,nullable=False)
     eyes_color=Column(str,nullable=False)

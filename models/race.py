@@ -5,5 +5,5 @@ from sqlalchemy import relationship
 class race(BaseModel):
     __tablename__="Race"
     __args__={"schema":"public"}
-    id_race=Column(int,primary_key=True,nullable=False)
+    id_race=Column(str,primary_key=True,nullable=False)
     race_name=Column(str,nullable=False)
