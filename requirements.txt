@@ -1,0 +1,6 @@
+flask 
+sqlalchemy
+pyjwt
+pydantic
+flask-openapi3
+openapi
