@@ -10,3 +10,5 @@ class data_login(BaseModel):
     id_login=Column(str,primary_key=True,nullable=False)
     user_email=Column(str,nullable=False)
     user_password=Column(str,nullable=False)
+    cellphone=Column(int,nullable=False)
+    user_name=Column(str,nullable=False)

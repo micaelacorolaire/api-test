@@ -13,5 +13,5 @@ class userdatacomplete(BaseModel):
     user_photo=Column(bool,nullable=False)
     user_age=Column(int,nullable=True)
     where_live=Column(str,nullable=True)
-    user_name=relationship("user_name",foreignkeys=[id_login])
+    user_name=relationship("user_name",backpopulates=[id_login])
     

@@ -5,6 +5,7 @@ from sqlalchemy import relationship
 class animals(BaseModel):
     ___tablename__="Animals"
     __args__={"schema":"public"}
+    race=Column(str,foreignkey=True,nullable=False)
     id_animal=Column(str,primary_key=True,nullable=False)
     age=Column(int,nullable=False)
     hair_color=Column(str,nullable=False)
@@ -16,3 +17,4 @@ class animals(BaseModel):
     diseases=Column(str,nullable=False)
     disabilities=Column(str,nullable=False)  
     photo_animal=Column(HttpUrl,nullable=False) 
+    animals=(relationship("race",backpopulates=[id_race]))
